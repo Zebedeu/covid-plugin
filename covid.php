@@ -32,6 +32,8 @@
 
 defined('ABSPATH') or die('Hey, what are you doing here? You silly human!');
 
+define('PLUGIN_URL', plugin_dir_url(dirname(__FILE__)) );
+require_once(dirname(__FILE__) . '/enqueue/enqueue.php');
 require_once(dirname(__FILE__) . '/api/init.php');
 
 function convid_header_section()
