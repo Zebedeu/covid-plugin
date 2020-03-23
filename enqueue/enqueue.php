@@ -12,7 +12,7 @@
  * @param bool $header (optional) Whether to enqueue the style before </head> or before </body>
  */
 function covid_style() {
-		wp_enqueue_style( 'covid-main', PLUGIN_URL . '/assets/css/main.css', array(  ), false, 'all' );
+		wp_enqueue_style( 'covid-main', PLUGIN_URL . 'assets/css/main.css', array(  ), false, 'all' );
 }
 add_action( 'wp_head', 'covid_style' );
 
@@ -26,6 +26,6 @@ add_action( 'wp_head', 'covid_style' );
  * @param bool $in_footer (optional) Whether to enqueue the script before </head> or before </body>
  */
 function covid_scripts() {
-	wp_enqueue_script( 'covid-main', PLUGIN_URL . '/assets/js/main.js', array( 'jquery' ), false, true );
+	wp_enqueue_script( 'covid-main', PLUGIN_URL . 'assets/js/main.js', array( 'jquery' ), false, true );
 }
 add_action( 'wp_head', 'covid_scripts' );
