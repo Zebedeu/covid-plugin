@@ -3,12 +3,12 @@
 
 
 /**
- * Enqueue scripts
+ * Enqueue Styles
  *
- * @param string $handle Script name
- * @param string $src Script url
+ * @param string $handle Style name
+ * @param string $src Style url
  * @param array $deps (optional) Array of style names on which this style depends
- * @param string|bool $ver (optional) Script version (used for cache busting), set to null to disable
+ * @param string|bool $ver (optional) Style version (used for cache busting), set to null to disable
  * @param bool $header (optional) Whether to enqueue the style before </head> or before </body>
  */
 function covid_style() {

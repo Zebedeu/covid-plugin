@@ -17,8 +17,15 @@ $body = wp_remote_retrieve_body( $request );
  }
  	foreach ($result as $key => $value) {
  		$date = new DateTime($value->lastupdate);
- 		echo  "<div id='count-tracking' style='display:none'><li>CONFIRMADOS : <span class='time'>". $value->confirmed . "</span></li><li> SUSPEITOS :  <span class='time'>". $value->deaths . "</span></li><li>RECUPERADOS :  <span class='time'>". $value->recovered . "</span></li><li> Ultima atualização <span class='time'>". $date->format('Y-m-d H:i:s') . "</span></li>";
- 	}
+ 		?>
+ 		<div id='count-tracking' style='display:inline;'>
+ 			<ul>
+	 			<li>CONFIRMADOS : <span class='time'><?php echo $value->confirmed; ?></span></li>
+	 			<li> SUSPEITOS :  <span class='time'><?php echo $value->deaths;?> </span></li>
+	 			<li>RECUPERADOS :  <span class='time'><?php echo $value->recovered; ?></span></li>
+	 			<li> Ultima atualização <span class='time'><?php echo $date->format('Y-m-d H:i:s');?></span></li>
+	 		</ul>
+ 	<?php }
 
 }
 add_action( 'covid_tracking_hook', 'covid_tracking');
