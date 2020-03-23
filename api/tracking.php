@@ -18,12 +18,12 @@ $body = wp_remote_retrieve_body( $request );
  	foreach ($result as $key => $value) {
  		$date = new DateTime($value->lastupdate);
  		?>
- 		<div id='count-tracking' style='display:inline;'>
+ 		<div id='count-tracking' style='display:none;'>
  			<ul>
-	 			<li>CONFIRMADOS : <span class='time'><?php echo $value->confirmed; ?></span></li>
-	 			<li> SUSPEITOS :  <span class='time'><?php echo $value->deaths;?> </span></li>
-	 			<li>RECUPERADOS :  <span class='time'><?php echo $value->recovered; ?></span></li>
-	 			<li> Ultima atualização <span class='time'><?php echo $date->format('Y-m-d H:i:s');?></span></li>
+	 			<li>CONFIRMADOS : <span class='number'><?php echo $value->confirmed; ?></span></li>
+	 			<li> SUSPEITOS :  <span class='number'><?php echo $value->deaths;?> </span></li>
+	 			<li>RECUPERADOS :  <span class='number'><?php echo $value->recovered; ?></span></li>
+	 			<li class="ultima-atualizacao"> Ultima atualização <?php echo $date->format('d/m/Y H:i');?></li>
 	 		</ul>
  	<?php }
 
