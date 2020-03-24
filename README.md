@@ -1,2 +1,2 @@
 # covid-plugin
- Changing the date format for the NewUp theme
+Plugin for covid19.alerta.ao
