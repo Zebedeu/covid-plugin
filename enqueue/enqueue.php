@@ -12,7 +12,7 @@
  * @param bool $header (optional) Whether to enqueue the style before </head> or before </body>
  */
 function covid_style() {
-		wp_enqueue_style( 'covid-main', PLUGIN_URL . 'covid/assets/css/main.css', array(  ), false, 'all' );
+		wp_enqueue_style( 'covid-main', PLUGIN_URL . 'assets/css/main.css', array(  ), false, 'all' );
 }
 add_action( 'wp_head', 'covid_style' );
 
@@ -25,22 +25,7 @@ add_action( 'wp_head', 'covid_style' );
  * @param string|bool $ver (optional) Script version (used for cache busting), set to null to disable
  * @param bool $in_footer (optional) Whether to enqueue the script before </head> or before </body>
  */
-
 function covid_scripts() {
-	wp_enqueue_script( 'covid-main', PLUGIN_URL . 'covid/assets/js/main.js', array( 'jquery' ), false, true );
+	wp_enqueue_script( 'covid-main', PLUGIN_URL . 'assets/js/main.js', array( 'jquery' ), false, true );
 }
-
 add_action( 'wp_head', 'covid_scripts' );
-
-function shapeSpace_print_scripts() { 
-	
-	?>
-	
-	<script>
-		var assetsCovid = <?php echo json_encode( PLUGIN_URL . "covid/assets/" ) ; ?>;
-	</script>
-	
-	<?php
-	
-}
-add_action('wp_print_scripts', 'shapeSpace_print_scripts');
