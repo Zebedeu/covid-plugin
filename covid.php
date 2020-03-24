@@ -36,7 +36,7 @@ define('PLUGIN_URL', plugin_dir_url(dirname(__FILE__)) );
 require_once(dirname(__FILE__) . '/enqueue/enqueue.php');
 require_once(dirname(__FILE__) . '/api/tracking.php');
 
-function convid_header_section()
+function covid_header_section()
 {
 ?>
 <div class="mg-head-detail hidden-xs">
@@ -106,13 +106,13 @@ function convid_header_section()
 </div>
 <?php 
 }
-add_action( 'after_setup_theme', 'convid_remove_parent_theme_date', 0 );
+add_action( 'after_setup_theme', 'covid_remove_parent_theme_date', 0 );
 
-function convid_remove_parent_theme_date() {
+function covid_remove_parent_theme_date() {
 
 remove_action('newsup_action_header_section', 'newsup_header_section', 5);
 }
 
-add_action('newsup_action_header_section', 'convid_header_section', 5);
+add_action('newsup_action_header_section', 'covid_header_section', 5);
 
 
