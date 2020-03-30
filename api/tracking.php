@@ -27,7 +27,7 @@ foreach ($result->locations as $key => $value) {
         <div id='count-tracking' style='display:none;'>
             <ul>
                 <li>CONFIRMADOS : <span class='number'><?php echo $data_confirmed; ?></span></li>
-                <li> SUSPEITOS :  <span class='number'><?php echo $data_deaths;?> </span></li>
+                <li> MORTES :  <span class='number'><?php echo $data_deaths;?> </span></li>
                 <li>RECUPERADOS :  <span class='number'><?php echo $data_recovered; ?></span></li>
                 <li class="last-updated"> Ultima actualização <?php echo $date->format('d/m/Y H:i');?></li>
             </ul>
